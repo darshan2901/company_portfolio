@@ -1,0 +1,401 @@
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600"); */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Begin - Testing Work */
+
+.about, .about-flex-item, .project, .service, .service-container, .service-grid {
+  border: 1px dashed #000;
+}
+
+/* End - Testing Work */
+
+
+
+/* Begin - HEADER SECTION */
+
+.header{
+  height: 100%;
+}
+
+.logo{
+  height: 150px;
+  padding: 2px 8px;
+}
+.icon-bar{
+  background: white;
+}
+.navbar-right a{
+  font-size: 20px;
+  color: white;
+}
+.navbar-nav a{
+  padding-top: 60px;
+}
+.navbar-nav li:hover{
+  background: white;
+}
+
+#banner{
+  background-color: grey;
+  background-image: url("../images/img22.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: relative;
+  height: 100vh;
+}
+
+/* End - HEADER SECTION */
+
+
+/* Begin - HOME SECTION */
+
+#home{
+  /* background-color: aqua; */
+  margin-left: 155px;
+  margin: auto 0;
+}
+#home h1{
+  margin-top:105px;	
+  color:white;
+  font-size:4em;
+}
+#home h2{
+  color: white;
+}
+
+/* End - HOME SECTION */
+
+
+/* Begin - ABOUT SECTION */
+
+.about-img {
+  width: 40vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about-content {
+  width: 50vw;
+  height: auto;
+  padding: 2em 1em;
+}
+
+.about-heading {
+  margin: 10px 0;
+}
+
+.about-sub-heading {
+  font-weight: 600;
+}
+
+.about-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.about-flex-item {
+  margin: 0 1em;
+  align-self: center;
+}
+
+@media screen and (max-width: 894px) {
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-flex-item {
+    height: auto;
+    width: auto;
+  }
+  .about-img {
+    width: 60%;
+    height: 30vh;
+  }
+  .about-content {
+    padding: 2em 1em;
+  }
+}
+
+/* End - ABOUT SECTION */
+
+
+
+/* Begin - PROJECT SECTION */
+
+.project {
+  padding: 1em;
+}
+
+.project-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.project-img {
+  width: 250px;
+  height: 250px;
+}
+
+.project-content {
+  text-align: center;
+}
+
+.project-span {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-left: 0.2em;
+}
+
+.project-plus {
+  margin: 0;
+  vertical-align:text-bottom;
+}
+
+@media screen and (max-width: 785px) {
+  .project-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+/* End - PROJECT SECTION */
+
+
+
+/* Begin - SERVICE SECTION */
+
+.service {
+  margin-top: 1.5em;
+}
+
+.service-heading {
+  text-align: center;
+}
+
+.service-description {
+  text-align: center;
+  margin: 1em 10em;
+}
+
+.service-vertical-line {
+  width: 150px;
+  height: 3px;
+  margin: 0 auto;
+  border: 0;
+  background-color: #f00;
+}
+
+.service-container {
+  margin-top: 2em;
+  padding: 1em 1.2em;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+  place-items: center;
+}
+
+.service-grid-item {
+  max-width: 16em;
+  padding: 0.7em;
+}
+
+.service-icon {
+  color: black;
+  width: 25px;
+  height: 25px;
+}
+
+.service-name {
+  text-align: center;
+  margin: 1em 0;
+  font-weight: 700;
+}
+
+.service-intro {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.service-btn {
+  border: 0;
+  color: #f00;
+  background-color: #fff;
+  text-decoration: underline;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Begin: Octagon */
+.octagonWrap {
+  width:100px;
+  height:100px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.octagon {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 4px solid gray;
+  border-width: 4px;
+}
+.octagon:before {
+  position: absolute;
+  top: -3px; right: -3px; bottom: -3px; left: -3px;
+  transform: rotate(45deg);
+  content: '';
+  border: inherit;
+}
+/* End: Octagon */
+
+@media screen and (max-width: 996px) {
+  .service-grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-grid {
+    row-gap: 40px;
+  }
+  .service-grid-item {
+    padding: 0;
+  }
+  .service-name {
+    margin-bottom: 0.5em;
+  }
+  .service-description {
+    margin: 1.5em;
+  }
+}
+
+@media screen and (max-width: 507px) {
+  .service-grid {
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+  }
+  .service-grid-item {
+    padding: 0;
+  }
+  .service-name {
+    margin-bottom: 0.5em;
+  }
+  .service-description {
+    margin: 1em;
+  }
+}
+
+/* End - SERVICE SECTION */
+
+
+
+
+
+
+
+
+/* JUNK */
+
+
+/* gif portion */
+/* .column {
+  float:inline-end;
+  width: 33.33%;
+  padding: 5px;
+  margin-left: 20px;
+} */
+
+/* .row::after {
+  content: "";
+  clear: both;
+  display: table-row;
+} */
+
+/* Animation */
+/* body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: absolute;
+    display: flex;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:white; */
+    /* background: -moz-radial-gradient(center, ellipse cover, #edf3f8 1%, #dee3e8 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #edf3f8 1%, #dee3e8 100%);
+    background: radial-gradient(ellipse at center, #edf3f8 1%, #dee3e8 100%); */
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
+  }
+  pentahedron {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #3E82F7;
+  }
+  
+  .point {
+    fill: #8491A3;
+  }
+  
+  .rhombus {
+    fill: #2DA94F;
+    stroke: #2DA94F;
+  }
+  
+  .x {
+    fill: #FDBD00;
+  }
+  
+  .circle {
+    fill: #ED412D;
+  }
+  
+  svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: translateZ(0px);
+  } */
+
+  /* .row .col{
+    margin: 0px 104px ;
+    padding: 10px 10px ;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .row .col2{
+    display: inline-flex;
+  }
+  .row .col2 h4{
+    margin: 10px 0px;
+  }
+  .fa-plus:before {
+    margin: 0px 5px;
+} */
